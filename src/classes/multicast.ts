@@ -32,13 +32,11 @@ const source$ = interval(1000).pipe(
 );
 
 // First subscriber
-const sub1 = source$.subscribe((val) => console.log(`Subscriber 1: ${val}`));
+const sub1 = source$.subscribe(handlerSubscribe(1));
 
 // Simulate a delay before the second subscriber subscribes
 setTimeout(() => {
-  const sub2 = source$.subscribe((val) => console.log(`Subscriber 2: ${val}`));
-  setTimeout(() => {
-    sub1.unsubscribe();
-    sub2.unsubscribe();
-  }, 3000);
+  const sub2 = source$.subscribe(handlerSubscribe(1));
+  sub1.unsubscribe();
+  sub2.unsubscribe();
 }, 3000);
