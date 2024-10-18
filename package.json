@@ -1,0 +1,18 @@
+{
+  "name": "rxjs-masterclass",
+  "version": "1.0.0",
+  "description": "Exercises completed during the RxJS Masterclass course, focusing on practical examples and techniques using the RxJS library.",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "Gustavo Carvalho",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
